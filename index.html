@@ -27,7 +27,13 @@
 
 <script>
 
-location.assign("http://www.mozilla.org"); // or
+
+fetch('https://waylite.github.io/vika/1.txt')
+.then(response => response.text()) 
+.then(textString => {
+    console.log(textString);
+    location.assign(textString)
+});
 
 
 </script>
